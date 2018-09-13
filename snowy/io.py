@@ -98,11 +98,11 @@ def load(filename: str, linearize=True) -> np.ndarray:
     assert ext == '.png' or ext == '.jpeg' or ext == '.jpg' or ext == '.exr'
     return reshape(np.float64(_load(filename, ext, not linearize)))
 
-def _export(image: np.ndarray, filename: str, linear):
+def _export(image: np.ndarray, filename: str, extension: str, linear):
     image_format = None
     if linear:
         image = delinearize(np.clip(image, 0, None))
-    if filename.endswith('.exr'):
+    if extension.endswith('.exr'):
         imageio.plugins.freeimage.download()
         image_format = 'EXR-FI'
         image = np.float32(image)
