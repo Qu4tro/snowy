@@ -93,7 +93,6 @@ def load(filename: str, linearize=True) -> np.ndarray:
     See also <a href="#reshape">reshape</a> and
     <a href="#linearize">linearize</a>  (which this calls).
     """
-
     ext = filename[filename.rfind('.'):]
     assert ext == '.png' or ext == '.jpeg' or ext == '.jpg' or ext == '.exr'
     return reshape(np.float64(_load(filename, ext, not linearize)))

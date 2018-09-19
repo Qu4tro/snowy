@@ -19,16 +19,22 @@ Painting and 2D paths are outside the scope of the library. See
 <!--
 
 Replace "imageio" with "snowyio" which has minimal C code (tinyexr and stb_image)
-
-Make a video with iterm2 and ipython (or bpython or ptpython)
+    Try to support URL's in load
+    Look at CairoSVG for inspiration, it takes url, fileobj, etc
 
 CPCF's
 
 height field AO
 
+Make a video with iterm2 and ipython (or bpython or ptpython)
+
+express the popular "notestrink.py" in terms of snowy operations
+
 prefiltering as seen in docs/hoppe
 
 arbitrary rotation
+    RShear: "A Fast Algorithm for General Raster Rotation" by Alan Paeth in Graphics Gems
+    http://www.leptonica.com/rotation.html
 
 variable radius blur (radius multiplier is a fn not a constant)
 test with a distance field + gradient
